@@ -11,11 +11,11 @@ import { useSelector } from 'react-redux'
 const chartOptions = {
     series: [
         {
-            name: "Online Customers",
-            data: [40,70,20,90,36,80,30,91,60]
+            name: "Electronics",
+            data: [40,70,20,90,36,80,30,91,60,50]
         },
         {
-            name: "Store Customers",
+            name: "Clothing",
             data: [40,30,70,80,40,16,40,20,51,10]
         }
     ],
