@@ -1,4 +1,5 @@
 import React from 'react'
+import Copyright from '../components/copyright/Copyright'
 
 function Products() {
     return (
@@ -7,6 +8,10 @@ function Products() {
             <h2 className="page-header">
                 Products
             </h2>
+
+            {/* Copyright */}
+            <Copyright/>
+
         </div>
     )
 }

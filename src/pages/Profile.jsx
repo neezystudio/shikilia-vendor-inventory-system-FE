@@ -1,4 +1,5 @@
 import React from 'react'
+import Copyright from '../components/copyright/Copyright'
 
 function Profile() {
     return (
@@ -7,6 +8,10 @@ function Profile() {
             <h2 className="page-header">
                 Profile
             </h2>
+
+            {/* Copyright */}
+            <Copyright/>
+
         </div>
     )
 }

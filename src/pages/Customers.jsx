@@ -1,6 +1,7 @@
 import React from 'react'
 import Table from '../components/table/Table'
 import customerList from '../assets/JsonData/customers-list.json' 
+import Copyright from '../components/copyright/Copyright'
 
 const customerTableHead = [
     '',
@@ -53,6 +54,10 @@ function Customers() {
                     </div>
                 </div>
             </div>
+
+            {/* Copyright */}
+            <Copyright/>
+
         </div>
     )
 }
