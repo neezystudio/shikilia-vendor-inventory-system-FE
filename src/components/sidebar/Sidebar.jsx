@@ -28,7 +28,7 @@ function Sidebar(props) {
     return (
         <div className="sidebar">
             <div className="sidebar__logo">
-                <img src={Logo} alt="Company Logo"/>
+                <img src="https://res.cloudinary.com/emacon-production/image/upload/v1623146015/Shikilia/Shikilia_Stores_Logo_zdzer3.png" alt="Company Logo"/>
             </div>
             {
                 sidebar_items.map((item, index) => (
