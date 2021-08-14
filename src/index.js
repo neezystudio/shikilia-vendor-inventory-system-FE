@@ -16,7 +16,7 @@ const store = createStore(
   rootReducer
 )
 
-document.title = 'React Dashboard'
+document.title = 'Shikilia Vendor Dashboard'
 
 ReactDOM.render(
   <Provider store={store}>
