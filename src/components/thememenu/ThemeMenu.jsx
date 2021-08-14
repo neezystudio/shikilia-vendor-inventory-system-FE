@@ -25,24 +25,24 @@ const color_settings = [
         background: 'blue-color',
         class: 'theme-color-blue'
     },
-    {
-        id: 'red',
-        name: 'Red',
-        background: 'red-color',
-        class: 'theme-color-red'
-    },
-    {
-        id: 'cyan',
-        name: 'Cyan',
-        background: 'cyan-color',
-        class: 'theme-color-cyan'
-    },
-    {
-        id: 'green',
-        name: 'Green',
-        background: 'green-color',
-        class: 'theme-color-green'
-    },
+    // {
+    //     id: 'red',
+    //     name: 'Red',
+    //     background: 'red-color',
+    //     class: 'theme-color-red'
+    // },
+    // {
+    //     id: 'cyan',
+    //     name: 'Cyan',
+    //     background: 'cyan-color',
+    //     class: 'theme-color-cyan'
+    // },
+    // {
+    //     id: 'green',
+    //     name: 'Green',
+    //     background: 'green-color',
+    //     class: 'theme-color-green'
+    // },
     {
         id: 'orange',
         name: 'Orange',
