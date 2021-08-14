@@ -70,8 +70,8 @@ const latestOrders = {
     head: [
         'order id',
         'user',
-        'total price',
         'date',
+        'total price',
         'status'
     ],
     body: [
