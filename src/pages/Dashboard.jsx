@@ -165,7 +165,7 @@ function Dashboard() {
         <div>
             <h2 className="page-header">Dashboard</h2>
 
-            <div className="row">
+            <div className="row"> 
                 {/* Status Cards */}
                 <div className="col-6">
                     <div className="row">

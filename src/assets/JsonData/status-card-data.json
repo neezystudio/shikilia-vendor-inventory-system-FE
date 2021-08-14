@@ -6,17 +6,17 @@
     },
     {
         "icon": "bx bx-cart",
-        "count": "2,001",
-        "title": "Daily visits"
+        "count": "300",
+        "title": "Total Products"
     },
     {
         "icon": "bx bx-dollar-circle",
-        "count": "$2,632",
+        "count": "KES 112,632,000",
         "title": "Total income"
     },
     {
         "icon": "bx bx-receipt",
-        "count": "1,711",
-        "title": "Total orders"
+        "count": "11",
+        "title": "Current Orders"
     }
 ]
