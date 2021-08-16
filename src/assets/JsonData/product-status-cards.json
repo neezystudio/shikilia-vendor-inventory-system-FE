@@ -1,0 +1,12 @@
+[
+    {
+        "icon": "bx bxs-box",
+        "count": "100",
+        "title": "Initial Stock"
+    },
+    {
+        "icon": "bx bx-box",
+        "count": "30",
+        "title": "Current"
+    }
+]

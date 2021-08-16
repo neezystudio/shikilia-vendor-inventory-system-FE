@@ -1,0 +1,20 @@
+.product__image-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product__image-main > img {
+    height: 300px;
+}
+.product__image-subimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.product__image-subimage > img {
+    height: 100px;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
