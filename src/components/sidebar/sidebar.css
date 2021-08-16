@@ -38,6 +38,7 @@
 
 .sidebar__item-inner > span {
     text-transform: capitalize;
+    font-size: 0.95rem;
 }
 
 .sidebar__item-inner:hover {
