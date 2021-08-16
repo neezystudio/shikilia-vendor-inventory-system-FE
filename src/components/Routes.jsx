@@ -5,6 +5,7 @@ import Customers from '../pages/Customers'
 import Dashboard from '../pages/Dashboard'
 import Inventory from '../pages/Inventory'
 import Orders from '../pages/Orders'
+import Product from '../pages/Product'
 import Products from '../pages/Products'
 import Profile from '../pages/Profile'
 import Promotion from '../pages/Promotion'
@@ -17,6 +18,7 @@ function Routes() {
             <Route path="/customers" component={Customers}/>
             <Route path="/categories" component={Categories}/>
             <Route path="/products" component={Products}/>
+            <Route path="/product" component={Product}/>
             <Route path="/inventory" component={Inventory}/>
             <Route path="/promotion" component={Promotion}/>
             <Route path="/profile" component={Profile}/>
