@@ -1,0 +1,17 @@
+.wrapper.end {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+.wrapper.center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.wrapper.start {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
