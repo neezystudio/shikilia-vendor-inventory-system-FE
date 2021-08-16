@@ -1,0 +1,6 @@
+[
+    {"id": 1, "product": "Denim Jacket", "category": "clothing", "initialStock": 20, "currentStock": 10, "status": "In Stock", "badgeType": "inStock", "link": "/product"},
+    {"id": 2, "product": "Denim Jacket", "category": "clothing", "initialStock": 20, "currentStock": 10, "status": "Out of Stock", "badgeType": "outofStock", "link": "/product"},
+    {"id": 3, "product": "Denim Jacket", "category": "clothing", "initialStock": 20, "currentStock": 10, "status": "In Stock", "badgeType": "inStock", "link": "/product"},
+    {"id": 4, "product": "Denim Jacket", "category": "clothing", "initialStock": 20, "currentStock": 10, "status": "Out of Stock", "badgeType": "outofStock", "link": "/product"}
+]
