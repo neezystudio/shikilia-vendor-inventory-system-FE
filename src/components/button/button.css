@@ -8,6 +8,11 @@
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
+
+.button, .fullWidth {
+    width: 100%;
+}
+
 .button:hover {
     background-color: var(--second-color);
 }
