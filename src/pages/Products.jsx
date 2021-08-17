@@ -62,7 +62,7 @@ function Products() {
                         <div className="card__head">
                             <div className="products__btns">
                                 <Button
-                                    content="Add Stock"
+                                    content="Add Product"
                                 />
                             </div>
                         </div>
