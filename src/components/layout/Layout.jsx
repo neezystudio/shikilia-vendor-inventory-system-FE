@@ -12,7 +12,7 @@ import Button from '../button/Button'
 import { Spinner } from 'react-bootstrap'
 
 function Layout() {
-    const [token, setToken] = useState(false);
+    const [token, setToken] = useState(true);
     const [authenticationType, setAuthenticationType] = useState('sign-in');
     const [userName, setUserName] = useState();
     const [password, setPassword] = useState();

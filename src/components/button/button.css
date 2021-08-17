@@ -9,7 +9,7 @@
     margin-bottom: 1rem;
 }
 
-.button, .fullWidth {
+.button.fullWidth {
     width: 100%;
 }
 
