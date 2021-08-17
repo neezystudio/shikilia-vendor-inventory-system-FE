@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import AddProductForm from '../components/add-product-form/AddProductForm';
+import Copyright from '../components/copyright/Copyright';
 
 function AddProduct() {
     const [productName, setProductName] = useState();
@@ -31,6 +32,9 @@ function AddProduct() {
                     </div>
                 </div>
             </div>
+
+            {/* Copyright */}
+            <Copyright/>
         </div>
     )
 }
