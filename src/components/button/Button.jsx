@@ -5,7 +5,7 @@ import './button.css'
 function Button(props) {
     return (
         <Link to={props.action}>
-            <button className="button">
+            <button className={`button ${props.width}`}>
                 <span className="button__content">
                     {props.content}  
                 </span>
