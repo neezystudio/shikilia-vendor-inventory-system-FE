@@ -2,7 +2,7 @@ import React from 'react'
 import Copyright from '../components/copyright/Copyright'
 import Button from '../components/button/Button'
 import productStatusCard from '../assets/JsonData/product-status-cards.json'
-import Link from 'react-router-dom'
+
 import StatusCard from '../components/status-card/StatusCard'
 import Chart from 'react-apexcharts'
 
@@ -11,6 +11,7 @@ import ProductImage from '../components/product-images/ProductImage'
 import Table from '../components/table/Table'
 import productStock from '../assets/JsonData/product-stock.json'
 import Wrapper from '../components/wrapper/Wrapper'
+import { Link } from 'react-router-dom'
 
 const chartOptions = {
     series: [
@@ -65,8 +66,11 @@ function Product() {
         <div>
             {/* Title */}
             <h2 className="page-header">
-                Product Name
-            </h2> 
+                <Link to="/products">
+                    <i class='bx bx-chevron-left'></i>
+                </Link>
+                {` Product Name`}
+            </h2>
 
             {/* Body */}
             <Wrapper position="end">

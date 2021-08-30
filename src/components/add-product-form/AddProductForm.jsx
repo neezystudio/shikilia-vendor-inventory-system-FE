@@ -3,10 +3,31 @@ import Button from '../button/Button';
 import Wrapper from '../wrapper/Wrapper';
 import './addProductForm.css'
 
+const categoryItems = [
+    {
+        val: 'Victor Githui',
+        placeholder: 'Victor Githui'
+    },
+    {
+        val: 'Victor Githui',
+        placeholder: 'Victor Githui'
+    },
+    {
+        val: 'Victor Githui',
+        placeholder: 'Victor Githui'
+    },
+    {
+        val: 'Victor Githui',
+        placeholder: 'Victor Githui'
+    }
+]
+
 function AddProductForm(props) {
     const [productName, setProductName] = useState();
+    const [category, setCategory] = useState();
     const [description, setDescription] = useState();
-    const [stock, setStock] = useState(0);
+    const [price, setPrice] = useState();
+    const [stock, setStock] = useState();
 
     return (
         <div className="addProduct">
@@ -33,6 +54,22 @@ function AddProductForm(props) {
                         />
                     </div>
 
+                    <label htmlFor="productName" className="label">Category</label>
+                    <div className="addProduct__input">
+                        <select name='category' id="category">
+                            <optgroup label="Category">
+                                {
+                                    categoryItems.map((value, index) => (
+                                        <option key={index} value={value.val}>
+                                            {value.placeholder}
+                                        </option>
+                                    ))
+                                }
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+
                     <label htmlFor="productDescription" className="label">Product Description</label>
                     <div className="addProduct__textarea">
                         <textarea 
@@ -44,6 +81,18 @@ function AddProductForm(props) {
                             cols="50"
                             value={description}
                             onChange={e => setDescription(e.target.value)}
+                        />
+                    </div>
+
+                    <label htmlFor="price" className="label">Price</label>
+                    <div className="addProduct__input">
+                        <input
+                            id="price"
+                            required
+                            type="number" 
+                            placeholder="Price"
+                            value={price}
+                            onChange={(e) => setPrice(e.target.value)}
                         />
                     </div>
 

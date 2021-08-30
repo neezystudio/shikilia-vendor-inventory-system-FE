@@ -39,6 +39,7 @@ function Categories() {
                                 <Button
                                     content="Add Category"
                                     type="button-primary"
+                                    action="/add-category"
                                 />
                             </div>
                         </div>
