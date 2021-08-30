@@ -44,6 +44,16 @@
     background-color: var(--main-bg);
 }
 
+.addProduct .addProduct__input > select {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    color: var(--txt-color);
+    background-color: var(--main-bg);
+}
+
 .label {
     margin-top: 1rem;
 }
