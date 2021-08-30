@@ -6,7 +6,8 @@ import './addProductForm.css'
 function AddProductForm(props) {
     const [productName, setProductName] = useState();
     const [description, setDescription] = useState();
-    const [stock, setStock] = useState(0);
+    const [price, setPrice] = useState();
+    const [stock, setStock] = useState();
 
     return (
         <div className="addProduct">
@@ -44,6 +45,18 @@ function AddProductForm(props) {
                             cols="50"
                             value={description}
                             onChange={e => setDescription(e.target.value)}
+                        />
+                    </div>
+
+                    <label htmlFor="price" className="label">Price</label>
+                    <div className="addProduct__input">
+                        <input
+                            id="price"
+                            required
+                            type="number" 
+                            placeholder="Price"
+                            value={price}
+                            onChange={(e) => setPrice(e.target.value)}
                         />
                     </div>
 
