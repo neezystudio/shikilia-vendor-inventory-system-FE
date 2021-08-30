@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import AddCategory from '../pages/AddCategory'
 import AddProduct from '../pages/AddProduct'
 import Categories from '../pages/Categories'
 import Customers from '../pages/Customers'
@@ -18,6 +19,7 @@ function Routes() {
             <Route path="/orders" component={Orders}/>
             <Route path="/customers" component={Customers}/>
             <Route path="/categories" component={Categories}/>
+            <Route path="/add-category" component={AddCategory}/>
             <Route path="/products" component={Products}/>
             <Route path="/add-product" component={AddProduct}/>
             <Route path="/product" component={Product}/>
