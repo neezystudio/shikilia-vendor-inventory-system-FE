@@ -10,6 +10,7 @@ import ThemeAction from '../../redux/actions/ThemeAction'
 import Wrapper from '../wrapper/Wrapper'
 import Button from '../button/Button'
 import { Spinner } from 'react-bootstrap'
+import ScrollToTop from '../scroll-to-top/ScrollToTop'
 
 function Layout() {
     const [token, setToken] = useState(true);
@@ -309,7 +310,9 @@ function Layout() {
                                 <div className="layout__content">
                                     <TopNav/>
                                     <div className="layout__content-main">
-                                        <Routes/>
+                                        <ScrollToTop>
+                                           <Routes/> 
+                                        </ScrollToTop>
                                     </div>
                                 </div>
                             </div>
