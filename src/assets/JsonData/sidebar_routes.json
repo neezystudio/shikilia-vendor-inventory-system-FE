@@ -25,16 +25,6 @@
         "icon": "bx bx-package"
     },
     {
-        "display_name": "inventory",
-        "route": "/inventory",
-        "icon": "bx bx-store-alt"
-    },
-    {
-        "display_name": "promotion",
-        "route": "/promotion",
-        "icon": "bx bx-bar-chart-alt"
-    },
-    {
         "display_name": "profile",
         "route": "/profile",
         "icon": "bx bxs-user"
