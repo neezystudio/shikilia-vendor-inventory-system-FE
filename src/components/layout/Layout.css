@@ -18,6 +18,15 @@
     margin-bottom: 1.5rem;
 }
 
+.authentication__input-Label {
+    margin-top: 1rem;
+}
+
+.authentication__error{
+    color: red !important;
+}
+
+
 .authentication__signIn-input {
     height: 50px;
     background-color: var(--main-bg);
