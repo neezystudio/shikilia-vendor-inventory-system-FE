@@ -12,8 +12,9 @@ import Button from '../button/Button'
 import { Spinner } from 'react-bootstrap'
 import ScrollToTop from '../scroll-to-top/ScrollToTop'
 
+
 function Layout() {
-    const [token, setToken] = useState(false);
+    const [token, setToken] = useState(true);
     const [authenticationType, setAuthenticationType] = useState('sign-in');
     const [userName, setUserName] = useState();
     const [password, setPassword] = useState();
@@ -52,6 +53,10 @@ function Layout() {
         dispatch(ThemeAction.setMode(themeClass))
         dispatch(ThemeAction.setColor(colorClass))
     }, [dispatch])
+
+    const handleLogOut = () => {
+        setToken(false)
+    }
 
     return (
         <BrowserRouter>
@@ -334,7 +339,7 @@ function Layout() {
                                     <TopNav/>
                                     <div className="layout__content-main">
                                         <ScrollToTop>
-                                           <Routes/> 
+                                           <Routes handleLogOut={handleLogOut}/> 
                                         </ScrollToTop>
                                     </div>
                                 </div>
