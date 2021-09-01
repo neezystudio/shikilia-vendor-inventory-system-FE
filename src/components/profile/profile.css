@@ -1,0 +1,61 @@
+.profile{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 100vh; */
+    color: var(--txt-color);
+}
+
+.profile__businessLogo{
+    display: flex;
+    justify-content: center;
+}
+
+.profile__businessLogo>img{
+    height: 100px;
+}
+
+.profile__businessName {
+    display: flex;
+    justify-content: center;
+}
+
+.profile__input-Label {
+    margin-top: 1rem;
+}
+
+.profile__error{
+    color: red !important;
+}
+
+.profile__form-input {
+    height: 50px;
+    background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.profile__form-input > input {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    color: var(--txt-color);
+    background-color: var(--main-bg);
+}
+
+.profile__form-input > i {
+    font-size: 1.5rem;
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.profile__form-btn {
+    margin-top: 1rem;
+}
