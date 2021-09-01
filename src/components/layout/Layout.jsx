@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom'
 import Routes from '../Routes'
 import Sidebar from '../sidebar/Sidebar'
 import TopNav from '../topnav/TopNav'
+import {db} from '../../config/firebase'
 
 import { useSelector, useDispatch } from 'react-redux'
 import ThemeAction from '../../redux/actions/ThemeAction'
@@ -27,6 +28,7 @@ function Layout() {
     const [confirmPassword, setConfirmPassword] = useState();
 
     const [loading, setLoading] = useState(false);
+    
 
     const [passwordErr, setPasswordErr] = useState(false);
     const [confirmPasswordErr, setConfirmPasswordErr] = useState(false);
@@ -57,6 +59,42 @@ function Layout() {
     const handleLogOut = () => {
         setToken(false)
     }
+    const[loader, setLoader] = useState(false);
+
+     const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoader(true)
+
+        db.collection('vendoruserinfor')
+        .add({
+            name:name,
+            userName:userName,
+            email:email,
+            businessName:businessName,
+            businessRegestrationCode:businessRegestrationCode,
+            password:password,
+            confirmPassword:confirmPassword,
+            
+        })
+        .then(() =>{
+            alert("User created 👍 ");
+            setLoader(false);
+        })
+        .catch((error)=> {
+            alert(error.message);
+            setLoader(false);
+        });
+        setEmail('');
+        setUserName('');
+        setPassword('');
+        setName('');
+        setBusinessName('');
+        setBusinessRegestrationCode('');
+        setPassword('');
+        setConfirmPassword('');
+
+    };
+
 
     return (
         <BrowserRouter>
@@ -80,6 +118,7 @@ function Layout() {
 
                                             <div className="card__body">
                                                 <div className="authentication__signIn-form">
+                                                //TODO: firebaselogin and write data to firestore
                                                     <form>
                                                         <label htmlFor="" className="authentication__input-Label">Username</label>
                                                         <div className="authentication__signIn-input">
@@ -162,7 +201,9 @@ function Layout() {
 
                                             <div className="card__body">
                                                 <div className="authentication__signUp-form">
-                                                    <form>
+                                                    <form
+                                                    onSubmit= {handleSubmit}
+                                                    >
                                                         <label htmlFor="" className="authentication__input-Label">Full Name</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
@@ -244,6 +285,8 @@ function Layout() {
                                                             <Button
                                                                 content={loading ? renderLoading() : 'Sign Up'}
                                                                 width="fullWidth"
+                                                                type="submit"
+                                                                
                                                             />
                                                         </div>
                                                     </form>
