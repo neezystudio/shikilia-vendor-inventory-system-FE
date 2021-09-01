@@ -53,7 +53,7 @@ function AddProductForm(props) {
                             }}
                         />
                     </div>
-
+//TODO: instances of categories present in the ecommerce site 
                     <label htmlFor="productName" className="label">Category</label>
                     <div className="addProduct__input">
                         <select name='category' id="category">
