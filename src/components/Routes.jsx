@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import AddCategory from '../pages/AddCategory'
 import AddProduct from '../pages/AddProduct'
@@ -12,7 +12,18 @@ import Products from '../pages/Products'
 import Profile from '../pages/Profile'
 import Promotion from '../pages/Promotion'
 
-function Routes() {
+import queryString from 'query-string'
+
+function Routes({ handleLogOut }) {
+    useEffect(() => {
+        const { logout } = queryString.parse(window.location.search);
+
+        if (logout === "true") {
+            handleLogOut()
+        }
+
+    }, [window.location.search])
+
     return (
         <Switch>
             <Route path="/" exact component={Dashboard}/>

@@ -12,6 +12,7 @@ import Button from '../button/Button'
 import { Spinner } from 'react-bootstrap'
 import ScrollToTop from '../scroll-to-top/ScrollToTop'
 
+
 function Layout() {
     const [token, setToken] = useState(true);
     const [authenticationType, setAuthenticationType] = useState('sign-in');
@@ -27,6 +28,17 @@ function Layout() {
 
     const [loading, setLoading] = useState(false);
 
+    const [passwordErr, setPasswordErr] = useState(false);
+    const [confirmPasswordErr, setConfirmPasswordErr] = useState(false);
+
+    useEffect(() => {
+        if ( password !== confirmPassword ) {
+            setConfirmPasswordErr(true);
+        } else {
+            setConfirmPasswordErr(false);
+        }
+    }, [confirmPassword])
+
     const themeReducer = useSelector(state => state.ThemeReducer);
     const dispatch = useDispatch(true);
 
@@ -41,6 +53,10 @@ function Layout() {
         dispatch(ThemeAction.setMode(themeClass))
         dispatch(ThemeAction.setColor(colorClass))
     }, [dispatch])
+
+    const handleLogOut = () => {
+        setToken(false)
+    }
 
     return (
         <BrowserRouter>
@@ -65,6 +81,7 @@ function Layout() {
                                             <div className="card__body">
                                                 <div className="authentication__signIn-form">
                                                     <form>
+                                                        <label htmlFor="" className="authentication__input-Label">Username</label>
                                                         <div className="authentication__signIn-input">
                                                             <input 
                                                                 required
@@ -74,6 +91,8 @@ function Layout() {
                                                                 onChange={(e) => setUserName(e.target.value)}
                                                             />
                                                         </div>
+
+                                                        <label htmlFor="" className={`authentication__input-Label ${passwordErr ? 'authentication__error' : ''}`}>{passwordErr ? "Incorrect Password" : "Password"}</label>
                                                         <div className="authentication__signIn-input">
                                                             <input 
                                                                 required
@@ -144,6 +163,7 @@ function Layout() {
                                             <div className="card__body">
                                                 <div className="authentication__signUp-form">
                                                     <form>
+                                                        <label htmlFor="" className="authentication__input-Label">Full Name</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
                                                                 required
@@ -153,6 +173,8 @@ function Layout() {
                                                                 onChange={(e) => setName(e.target.value)}
                                                             />
                                                         </div>
+
+                                                        <label htmlFor="" className="authentication__input-Label">Username</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
                                                                 required
@@ -162,6 +184,8 @@ function Layout() {
                                                                 onChange={(e) => setUserName(e.target.value)}
                                                             />
                                                         </div>
+
+                                                        <label htmlFor="" className="authentication__input-Label">Email Address</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
                                                                 required
@@ -171,6 +195,8 @@ function Layout() {
                                                                 onChange={(e) => setEmail(e.target.value)}
                                                             />
                                                         </div>
+
+                                                        <label htmlFor="" className="authentication__input-Label">Business Name</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
                                                                 required
@@ -180,6 +206,8 @@ function Layout() {
                                                                 onChange={(e) => setBusinessName(e.target.value)}
                                                             />
                                                         </div>
+
+                                                        <label htmlFor="" className="authentication__input-Label">Business Regestration Code</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
                                                                 required
@@ -189,6 +217,8 @@ function Layout() {
                                                                 onChange={(e) => setBusinessRegestrationCode(e.target.value)}
                                                             />
                                                         </div>
+
+                                                        <label htmlFor="" className="authentication__input-Label">Password</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
                                                                 required
@@ -197,11 +227,9 @@ function Layout() {
                                                                 value={password}
                                                                 onChange={(e) => setPassword(e.target.value)}
                                                             />
-                                                            <i 
-                                                                className={`bx ${showPassword ? 'bxs-low-vision' : 'bxs-show'}`}
-                                                                onClick={() => setShowPassword(!showPassword)}
-                                                            ></i>
                                                         </div>
+
+                                                        <label htmlFor="" className={`authentication__input-Label ${confirmPasswordErr ? 'authentication__error' : ''}`}>{confirmPasswordErr ? "Doesn't match your password" : "Confirm Password"}</label>
                                                         <div className="authentication__signUp-input">
                                                             <input 
                                                                 required
@@ -311,7 +339,7 @@ function Layout() {
                                     <TopNav/>
                                     <div className="layout__content-main">
                                         <ScrollToTop>
-                                           <Routes/> 
+                                           <Routes handleLogOut={handleLogOut}/> 
                                         </ScrollToTop>
                                     </div>
                                 </div>
