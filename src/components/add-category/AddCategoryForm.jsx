@@ -1,11 +1,33 @@
 import React, { useState } from 'react'
 import Button from '../button/Button'
 import Wrapper from '../wrapper/Wrapper'
+import {db} from  '../../config/firebase'
 import './addcategoryform.css'
 
 function AddCategoryForm() {
     const [categoryName, setCategoryName] = useState();
     const [description, setDescription] = useState();
+        const[loader, setLoader] = useState(false);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoader(true)
+
+        db.collection('categories')
+        .add({
+            categoryName:categoryName,
+            description:description,
+        })
+        .then(() =>{
+            alert("Thank you for subscribing, we will keep in touch 👍 ");
+            setLoader(false);
+        })
+        .catch((error)=> {
+            alert(error.message);
+            setLoader(false);
+        });
+        setCategoryName('');
+        setDescription('');
+    };
 
     return (
         <React.Fragment>
@@ -13,7 +35,9 @@ function AddCategoryForm() {
                 <h4>{categoryName}</h4>
             </Wrapper>
             <div className="addCategory">
-                <form action="">
+                <form action=""
+                onSubmit= {handleSubmit}
+                >
                     <div className="label">
                         Category Name
                     </div>
@@ -42,8 +66,10 @@ function AddCategoryForm() {
                     </div>
                     <Wrapper position="center">
                         <Button
+                        type="submit"
                             width="fullWidth"
                             content="Add Category"
+                            onClick={handleSubmit}
                         />
                     </Wrapper>
                     

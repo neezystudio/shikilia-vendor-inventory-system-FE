@@ -3,22 +3,37 @@ import Button from '../button/Button';
 import Wrapper from '../wrapper/Wrapper';
 import './addProductForm.css'
 
+
+//TODO: to add this to admin dashboard
+
 const categoryItems = [
     {
-        val: 'Victor Githui',
-        placeholder: 'Victor Githui'
+        val: 'Clothing',
+        placeholder: 'Clothing'
     },
     {
-        val: 'Victor Githui',
-        placeholder: 'Victor Githui'
+        val: 'Electronics',
+        placeholder: 'Electronics'
     },
     {
-        val: 'Victor Githui',
-        placeholder: 'Victor Githui'
+        val: 'Jewellery',
+        placeholder: 'Jewellery'
     },
     {
-        val: 'Victor Githui',
-        placeholder: 'Victor Githui'
+        val: 'Health & Beauty',
+        placeholder: 'Health & Beauty'
+    },
+     {
+        val: 'Kids',
+        placeholder: 'Kids'
+    },
+     {
+        val: 'Sports',
+        placeholder: 'Sports'
+    },
+     {
+        val: 'Home & Garden',
+        placeholder: 'Home & Garden'
     }
 ]
 
@@ -28,7 +43,7 @@ function AddProductForm(props) {
     const [description, setDescription] = useState();
     const [price, setPrice] = useState();
     const [stock, setStock] = useState();
-
+//TODO: instances of categories present in the ecommerce site from line 71
     return (
         <div className="addProduct">
             <div className="row">
@@ -53,7 +68,7 @@ function AddProductForm(props) {
                             }}
                         />
                     </div>
-//TODO: instances of categories present in the ecommerce site 
+
                     <label htmlFor="productName" className="label">Category</label>
                     <div className="addProduct__input">
                         <select name='category' id="category">
